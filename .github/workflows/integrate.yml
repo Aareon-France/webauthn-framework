@@ -73,6 +73,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: "Get Composer Cache Directory"
+        id: "composer-cache"
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
+
       - name: "Cache Composer dependencies"
         uses: actions/cache@v4
         with:
@@ -116,6 +122,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: "Get Composer Cache Directory"
+        id: "composer-cache"
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
+
       - name: "Cache Composer dependencies"
         uses: actions/cache@v4
         with:
@@ -150,6 +162,12 @@ jobs:
 
       - name: "Checkout code"
         uses: "actions/checkout@v4"
+
+      - name: "Get Composer Cache Directory"
+        id: "composer-cache"
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
 
       - name: "Cache Composer dependencies"
         uses: actions/cache@v4
@@ -191,6 +209,12 @@ jobs:
 
       - name: "Checkout code"
         uses: "actions/checkout@v4"
+
+      - name: "Get Composer Cache Directory"
+        id: "composer-cache"
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
 
       - name: "Cache Composer dependencies"
         uses: actions/cache@v4
@@ -236,6 +260,12 @@ jobs:
       - name: "Checkout code"
         uses: "actions/checkout@v4"
 
+      - name: "Get Composer Cache Directory"
+        id: "composer-cache"
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
+
       - name: "Cache Composer dependencies"
         uses: actions/cache@v4
         with:
@@ -265,6 +295,12 @@ jobs:
     steps:
       - name: "Checkout code"
         uses: "actions/checkout@v4"
+
+      - name: "Get Composer Cache Directory"
+        id: "composer-cache"
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
 
       - name: "Cache Composer dependencies"
         uses: actions/cache@v4
